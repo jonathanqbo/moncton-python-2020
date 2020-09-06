@@ -25,6 +25,6 @@ print('sequence[-3]', sequence[-3])
 print('sequence[0:10]', sequence[0:10])
 print('sequence[:10]', sequence[:10])
 # last 10
-print('sequence[10:]', sequence[10:])
+print('sequence[-10:]', sequence[-10:])
 
 
