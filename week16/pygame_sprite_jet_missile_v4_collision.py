@@ -9,11 +9,11 @@ LAUNCH_MISSILE = pygame.USEREVENT + 1
 
 class SpaceBackground(pygame.sprite.Sprite):
 
-    image = pygame.image.load('../week14/assets/backdrops/space.png')
+    image = pygame.image.load('assets/backdrops/space.png')
 
     def __init__(self):
         self.rect = self.image.get_rect()
-        pygame.mixer.Sound('../week14/assets/sounds/back_ground.wav').play()
+        pygame.mixer.Sound('assets/sounds/back_ground.wav').play()
 
 
 class Jet(pygame.sprite.Sprite):
@@ -79,7 +79,7 @@ class Jet(pygame.sprite.Sprite):
 
 class Missile(pygame.sprite.Sprite):
 
-    image = pygame.image.load('../week14/assets/sprites/missile.png')
+    image = pygame.image.load('assets/sprites/missile.png')
 
     def __init__(self, game):
         super().__init__()
