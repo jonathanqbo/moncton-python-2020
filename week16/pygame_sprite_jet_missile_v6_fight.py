@@ -50,12 +50,12 @@ class Jet(pygame.sprite.Sprite):
         self.__hit_missile()
 
     def fire(self):
-        self.game.asteroids.add(Missile(self.game, self.rect.right, self.rect.centery))
+        self.game.missiles.add(Missile(self.game, self.rect.right, self.rect.centery))
 
     def __hit_missile(self):
-        the_missile = pygame.sprite.spritecollideany(self, self.game.asteroids)
-        if the_missile:
-            the_missile.kill()
+        the_asteroid = pygame.sprite.spritecollideany(self, self.game.asteroids)
+        if the_asteroid:
+            the_asteroid.kill()
             self.game.game_over()
 
     def __move(self):
