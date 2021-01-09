@@ -22,6 +22,7 @@ class Score(pygame.sprite.Sprite):
     def __init__(self, *groups):
         super().__init__(groups)
         self.font = pygame.font.Font(pygame.font.get_default_font(), 36)
+        # self.font = pygame.font.SysFont("comicsansms", 36)
         self.score = 0
 
     def update(self):
