@@ -771,7 +771,7 @@ class Game:
         levels = []
         levels.append(Level1(self))
         levels.append(Level2(self))
-        return levels;
+        return levels
 
 
 def main():
