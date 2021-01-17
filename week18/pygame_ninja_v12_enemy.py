@@ -1,4 +1,6 @@
-from week19.pygame_ninjia_level import *
+import pygame
+import itertools
+import random
 
 FPS = 30
 SCREEN_WIDTH, SCREEN_HEIGHT = 1500, 750
@@ -509,7 +511,7 @@ class Game:
         self.clock = pygame.time.Clock()
         self.scene_width = 0
 
-        self.background = GrassBackground()
+        self.background = Background()
         self.ninja = Ninja(self, 0, 0)
 
         self.platforms = pygame.sprite.Group()

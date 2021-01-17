@@ -1,4 +1,4 @@
-from week19.pygame_ninjia_level import *
+import pygame
 
 FPS = 30
 SCREEN_WIDTH, SCREEN_HEIGHT = 1500, 750
@@ -70,7 +70,7 @@ class Game:
         self.screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         self.clock = pygame.time.Clock()
 
-        self.background = GrassBackground()
+        self.background = Background()
         self.ground = GroundTile(self, 0, SCREEN_HEIGHT, 12, 2);
 
         self.all_sprites = pygame.sprite.LayeredUpdates()

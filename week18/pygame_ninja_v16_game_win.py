@@ -1,4 +1,6 @@
-from week19.pygame_ninjia_level import *
+import pygame
+import itertools
+import random
 
 FPS = 30
 SCREEN_WIDTH, SCREEN_HEIGHT = 1500, 750
@@ -604,7 +606,7 @@ class Level:
 class Level1(Level):
 
     def build(self):
-        self.game.background = GrassBackground()
+        self.game.background = Background()
 
         first_ground_tile = GrassPlatform(self.game, SCREEN_HEIGHT, 12, 1)
         Decorator(GrassPlatformDecoration).decor(first_ground_tile)
@@ -624,7 +626,7 @@ class Level1(Level):
 class Level2(Level):
 
     def build(self):
-        self.game.background = GrassBackground()
+        self.game.background = Background()
 
         first_ground_tile = GrassPlatform(self.game, SCREEN_HEIGHT, 12, 1)
         Decorator(GrassPlatformDecoration).decor(first_ground_tile)
@@ -649,7 +651,7 @@ class Game:
         self.clock = pygame.time.Clock()
         self.scene_width = 0
 
-        self.background = GrassBackground()
+        self.background = Background()
         self.ninja = Ninja(self, 0, 0)
 
         self.platforms = pygame.sprite.Group()
