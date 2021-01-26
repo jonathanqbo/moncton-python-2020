@@ -118,6 +118,12 @@ def create_add_ui(books):
             label_error_info.config(foreground='red')
             label_error_info['text'] = 'Wrong number!'
 
+    def on_button_add_delete():
+        cur = listbox.curselection()
+        if cur:
+            del books[cur[0]]
+            listbox.delete(cur)
+
     def on_button_save_click():
         save_file()
 
@@ -136,6 +142,8 @@ def create_add_ui(books):
     entry_author = tk.Entry(frame_input, width=5)
     button_add = tk.Button(frame_input, text='Add', width=15)
     button_add['command'] = on_button_add_click
+    button_delete = tk.Button(frame_input, text='Delete', width=15)
+    button_delete['command'] = on_button_add_delete
     button_save = tk.Button(frame_input, text='Save', width=15)
     button_save['command'] = on_button_save_click
     label_error_info = tk.Label(frame_input)
@@ -150,6 +158,7 @@ def create_add_ui(books):
     label_author.pack(side='left', padx=5)
     entry_author.pack(side='left', padx=5)
     button_add.pack(side='left', padx=5)
+    button_delete.pack(side='left', padx=5)
     button_save.pack(side='left', padx=5)
     label_error_info.pack(side='left', padx=10)
 
