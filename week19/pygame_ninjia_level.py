@@ -1,6 +1,6 @@
-from week19.pygame_ninjia_tiles import *
-from week19.pygame_ninjia_enemies import *
-from week19.pygame_ninjia_ninjia import *
+from pygame_ninjia_tiles import *
+from pygame_ninjia_enemies import *
+from pygame_ninjia_ninjia import *
 
 
 class GameOver(pygame.sprite.Sprite):

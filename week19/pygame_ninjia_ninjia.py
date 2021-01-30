@@ -1,6 +1,6 @@
 import pygame
 import itertools
-from week19.pygame_ninjia_settings import *
+from pygame_ninjia_settings import *
 
 
 class Kunai(pygame.sprite.Sprite):

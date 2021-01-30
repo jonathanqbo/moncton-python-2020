@@ -1,4 +1,4 @@
-from week19.pygame_ninjia_level import *
+from pygame_ninjia_level import *
 
 
 class Game:

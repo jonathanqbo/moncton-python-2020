@@ -1,6 +1,6 @@
 import pygame
 import random
-from week19.pygame_ninjia_settings import *
+from pygame_ninjia_settings import *
 
 
 class GrassPlatformDecoration(pygame.sprite.Sprite):
